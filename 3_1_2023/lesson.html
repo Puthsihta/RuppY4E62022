@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+        <li>
+            <p>ឯកសា xsl តែងតែផ្តើមដោយធាតុ <xsl:stylesheet> or <xsl:transition> 
+                ដែលមានរបៀបសរសេរដូចខាងក្រោម : </p>
+                <xsl:stylesheet version="1.0"
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+or:
+<xsl:transform version="1.0"
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <p>
+                <xsl:template match="/">
+                    បង្កើតក្បួនឬរបៀបថ្លែងរបស់ធាតុដែលបានបញ្ជាក់ក្នុងគុណលក្ខណះញែក
+            </p>
+            <br>
+            <b>* Note </b>
+            <br>
+            <p>
+                សញ្ញា "/" តាងធាតុរបស់ឯកសា xml 
+            </p>
+        </li>
+        <li>
+            <tr>
+                <td><xsl:value-of select="catalog/cd/title"/></td>
+                <td><xsl:value-of select="catalog/cd/artist"/></td>
+              </tr>
+              <p>សម្រាប់ស្រងយកតម្លៃរបស់ធាតុឬតម្លៃរបស់គុណលក្ខណះដែលបានបញ្ជាក់ក្នុងគុណលក្ខណះ selete</p>
+              <br>
+              <p>ក្នុង x path សញ្ញា / ក៏ត្រូវបានប្រើប្រាស់សម្រាប់សរសេរធាតុតាមថានារុក្រមផងដែលដូចជា មេធាតុ/កូនធាតុ/ចៅធាតុ រីឯសញ្ញា @ ត្រូវបានសរសេនៅខាងមុខគុណលក្ខណះ</p>
+        </li>
+        <li>
+            <p>
+                For Each : សម្រាប់អនុវត្តន៍ការថ្លែងច្រើនដងសារចុះសារឡើងទៅតាមចំនួនកូនធាតុដែលមាន
+            </p>
+            <br>
+            <p>
+                <b>Note :</b>
+                <p>
+                    បើចង់កំណត់លក្ខខណឲ្យការថ្លែងធ្វើឡើងតែចំពោះកូនធាតុមួយប៉ុណ្ណោះ នោះលក្ខខណត្រូវសរសេក្នុងចន្លោះសញ្ញា [] មួយគូ ដោយប្រើប្រាស់សញ្ញាប្រមាណវិធីប្រៀបធៀប
+                    ផ្លូវការដូចខាងក្រោម ៖
+                </p>
+                <ul>
+                    <li>=  (equal)</li>
+                    <li>!= (not equal)</li>
+                    <li>&lt; less than</li>
+                    <li>&gt; greater than</li>
+                </ul>
+            </p>
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <p>
+                <xsl:sort select="x path"/>
+                <br>
+                សម្រាប់តម្រាបពត័មានធាតុឬតាមគុណលក្ខណះដែលបានបញ្ជាក់ក្នុង x path
+            </p>
+            <b>Note</b>
+            <br>
+            <p>
+                Sort តែងតែសរសេរជាកូនរបស់ for each ប៉ុន្តែ for each ជួនមាន sort ជូនមិនមាន sort 
+            </p>
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <p>
+                <xsl:if test="expression">
+            ...some output if the expression is true...
+            </xsl:if>
+            XSL IF
+            បើកន្សោមលក្ខខណក្នុងគុណលក្ខណះ if ត្រូវបានបំពេញទើបការថ្លែងអនុវត្តន៍
+            <br>
+            ក្នុង xsl ត្រូវបានប្រើប្រាស់បើសិនជាមានលក្ខខណតែមួយប៉ុណ្ណោះ
+                        </p>
+                    </li>
+    </ul>
+    <ul>
+        <li>
+            <p>
+                <xsl:choose>
+                <xsl:when test="expression">
+                    ... some output ...
+                </xsl:when>
+                <xsl:otherwise>
+                    ... some output ....
+                </xsl:otherwise>
+                </xsl:choose
+                <br>
+                <br>
+                ប្រើនៅពេលមានលក្ខខណច្រើនដែលជាធម្មតាលក្ខខណនី១ៗសរសេរដោយធាតុ when រៀងៗខ្លួនរីឯធាតុ otherwise គឺពិតដោយឥតលក្ខខណដែល
+                ធាតុនេះសរសេរក៏បានមិនសរសេរក៏បាន  តែបើសរសេរត្រូវតែសរសេរនៅចុងក្រោយគេ
+            </p>
+
+        </li>
+    </ul>
+  </body>
+</html>
