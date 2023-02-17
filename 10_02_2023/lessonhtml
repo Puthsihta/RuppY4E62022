@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson</title>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <p>
+          អ្នកអាចបញ្ជូនព័តមានដែលស្ងិតក្នុង database (strongly typed models and
+          the @model directive) ទៅឲ្យ view ប្រើបានផងដែរ។
+          <br />
+          អ្នកអាចកត់សម្គាល់បានថា view អាចប្រើព័តមានដែលស្ថិតក្នុង database
+          ដោយសង្គេតត្រង់កំពូលនៅក្នុង view បើមាន : @model Mvc.Models.Movie
+        </p>
+      </li>
+      <li>
+        <p>@model IEnumerable{`<MvcMovice.Mdels.Move>`}</p>
+            <br>
+            មានន័យថា Unit អាចប្រើមួយឬច្រើននៃជួរដេកព៍តមាននៃតារង movice.
+      </li>
+    </ul>
+  </body>
+</html>
